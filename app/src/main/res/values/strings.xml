@@ -38,6 +38,21 @@
     <string name="google_status_fmt">Google User: %s</string>
     <string name="google_title_text">Google Sign In</string>
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
+
+
+
+
+    <string-array name="Animals">
+        <item>Select Animal!!</item>
+        <item>Lion</item>
+        <item>Tiger</item>
+        <item>Elephant</item>
+        <item>Zebra</item>
+        <item>Giraffe</item>
+        <item>Deer</item>
+    </string-array>
+
+
 </resources>
 
 
