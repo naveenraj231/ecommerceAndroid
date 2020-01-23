@@ -1,73 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".HomeActivity"
-    >
+    android:layout_height="match_parent">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/menu_navigation" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.activity.HomeActivity">
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Sasta Nahi Sabse Achcha Khojo" />
+
+        <ImageView
+            android:id="@+id/category_image"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/logo"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_categories"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
 
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="482dp"
+            android:layout_margin="15dp"
+            android:scrollbars="vertical" />
 
+    </LinearLayout>
 
-
-   <SearchView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:queryHint="Search here "
-       android:iconifiedByDefault="false"
-       android:layout_marginTop="80dp"
-       android:layout_marginLeft="20dp"
-       android:layout_marginRight="20dp"
-
-       ></SearchView>
-   <TextView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="CATEGORIES"
-       android:height="45sp"
-       android:textStyle="bold"
-       android:layout_marginLeft="40dp"
-       android:layout_marginRight="40dp"
-
-       android:layout_marginTop="30dp"
-
-
-      />
-   <ImageView
-       android:id="@+id/category1"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-  android:layout_marginTop="15dp"
-       />
-   <ImageView
-       android:id="@+id/category2"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="15dp"
-       />
-   <ImageView
-       android:id="@+id/category3"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="15dp"
-       />
-   <ImageView
-       android:id="@+id/category4"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="15dp"
-       />
-   <ImageView
-       android:id="@+id/category5"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="15dp"
-       />
-
-
-
-
-
-</LinearLayout>
+</RelativeLayout>
